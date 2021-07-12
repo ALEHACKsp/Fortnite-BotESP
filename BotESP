@@ -1,0 +1,7 @@
+if (settings::botesp && strstr(NameCurrentActor.c_str(), "PlayerPawn_Athena_Phoebe_C"))
+{
+	Vector3 headpos = { 0 };
+	GetBoneLocation(CurrentActor, 66, &headpos); 
+	WorldToScreen(Vector3(headpos.x, headpos.y, headpos.z), &headpos);
+	DrawOutlinedText("Bot", ImVec2(headpos.x, headpos.y + 16), ImColor(255, 255, 255), false);
+}
